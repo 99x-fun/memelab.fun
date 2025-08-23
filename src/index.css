@@ -1,0 +1,37 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+.radial {
+  background:
+    radial-gradient(1000px 500px at -10% -10%, rgba(139,92,246,0.25), transparent 50%),
+    radial-gradient(800px 400px at 110% 10%, rgba(34,211,238,0.18), transparent 50%),
+    linear-gradient(180deg, #0a0416 0%, #120a24 100%);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.glow {
+  box-shadow: 0 0 40px rgba(34,211,238,.35), 0 0 80px rgba(139,92,246,.25);
+}
+
+
+@keyframes runningLight {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 300% 50%; }
+}
+
+.animate-runningLight {
+  animation: runningLight 4s linear infinite;
+}
