@@ -35,3 +35,32 @@ html, body, #root {
 .animate-runningLight {
   animation: runningLight 4s linear infinite;
 }
+/* Tell browsers we support light+dark so they don't force colors */
+:root { color-scheme: light dark; }
+
+/* Common gradient text rules (works in Brave dark mode too) */
+.gradient-solana-1,
+.gradient-solana-2 {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  display: inline;       /* important: inline hi rahe */
+  font-weight: 800;
+}
+
+/* Solana-ish gradients (you can tweak the stops) */
+.gradient-solana-1 {
+  background-image: linear-gradient(90deg, #9945FF, #14F195, #00C2FF);
+}
+.gradient-solana-2 {
+  background-image: linear-gradient(90deg, #00FFA3, #14F195, #9945FF);
+}
+
+/* Extra safety for forced dark modes */
+@media (prefers-color-scheme: dark) {
+  .gradient-solana-1,
+  .gradient-solana-2 {
+    -webkit-text-fill-color: transparent !important;
+  }
+}

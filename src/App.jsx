@@ -68,7 +68,8 @@ export default function App() {
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight">
-              You bring <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-300">memes</span>,<br className="hidden sm:block"/> we bring <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-purple-400">rewards</span>.
+             You bring <span className="gradient-solana-1">memes</span>,<br />
+             we bring <span className="gradient-solana-2">rewards</span>.
             </h1>
 
             <p className="text-base sm:text-lg text-white/70 max-w-xl">
